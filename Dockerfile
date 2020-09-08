@@ -4,6 +4,7 @@ RUN apt update && apt -y upgrade
 RUN apt -y install git gcc g++
 RUN conda install -c anaconda pip
 RUN conda update -n base -c defaults conda
+RUN pip install ipywidgets
 RUN git clone https://github.com/indian-institute-of-science-qc/qiskit-aakash.git
 WORKDIR qiskit-aakash
 RUN pip install -e .
