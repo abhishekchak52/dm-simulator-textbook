@@ -1,14 +1,9 @@
 # Dockerfile for dm-simulator-examples
-FROM continuumio/miniconda3:latest
-RUN apt update && apt -y upgrade
-RUN apt -y install git gcc g++
-RUN conda install -c anaconda pip
-RUN conda update -n base -c defaults conda
-RUN pip install ipywidgets
+FROM python:3.8
 RUN git clone https://github.com/indian-institute-of-science-qc/qiskit-aakash.git
 WORKDIR qiskit-aakash
 RUN pip install -e .
-RUN conda install -c conda-forge jupyterlab
+RUN pip install jupyterlab
 VOLUME /notebooks
 WORKDIR /notebooks
 EXPOSE 8888
