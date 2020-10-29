@@ -3,13 +3,13 @@ This repository contains example notebooks developed using the `qiskit-aakash` d
 
 First build the container using
 
-`docker build -t dm-simulator-examples -f Dockerfile .`
+`docker build -t dmsim .`
 
 Then run the container using 
 
-`docker run -i --rm -p 8888:8888 -v $pwd/notebooks:/notebooks -t dm-simulator-examples`(Windows)
+`docker run --rm -p 8888:8888 -v $pwd/notebooks:/notebooks dmsim`(Windows)
 
-`docker run -i --rm -p 8888:8888 -v $(pwd)/notebooks:/notebooks -t dm-simulator-examples`(Linux)
+`docker run --rm -p 8888:8888 -v $(pwd)/notebooks:/notebooks dmsim` (Linux)
 
 Open Jupyter Lab on the host using the link in the container run output. 
 The notebooks folder is shared between the host and the container. This is the starting location of the Jupyterlab instance when it is started. 
