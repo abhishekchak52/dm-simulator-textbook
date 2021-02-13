@@ -7,11 +7,10 @@ First build the container using
 
 `docker build -t dmsim .`
 
-Then run the container using 
+Then, to run the container, use the appropriate shell script for your shell
+`start_env.bat` (Command Prompt) `start_env.ps1` (Powershell) `start_env.sh` (Bash)
 
-`docker run --rm -p 8888:8888 -v $pwd/notebooks:/notebooks dmsim`(Windows)
-
-`docker run --rm -p 8888:8888 -v $(pwd)/notebooks:/notebooks dmsim` (Linux)
+Once you see Jupyter running in the shell, copy the URL for the server and paste it into your browser to run it
 
 Open Jupyter Lab on the host using the link in the container run output. 
 The notebooks folder is shared between the host and the container. This is the starting location of the Jupyterlab instance when it is started. 
