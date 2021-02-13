@@ -1,6 +1,6 @@
 # Dockerfile for dm-simulator-examples
 FROM python:3.8
-RUN git clone https://github.com/indian-institute-of-science-qc/qiskit-aakash.git
+RUN git clone https://github.com/deadbeatfour/qiskit-aakash.git
 WORKDIR qiskit-aakash
 RUN pip install -e .
 RUN pip install jupyterlab
